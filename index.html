@@ -1,119 +1,201 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MASTECH Association | Hail MASTECH</title>
-<meta name="description" content="MASTECH Association — building a stronger community through welfare, education, opportunities and mutual support.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HAIL MASTECH/GREENS ASSOCIATION - Welfare, membership, education, sponsorship jobs, scholarships and community support.">
+<title>HAIL MASTECH/GREENS ASSOCIATION</title>
 <style>
-:root{--navy:#102a43;--blue:#1769aa;--gold:#f4b942;--light:#f5f8fb;--ink:#17212b;--muted:#617386;--white:#fff}
+:root{--green:#08783e;--dark:#063b25;--gold:#f5b400;--light:#f4faf6;--white:#fff;--text:#173025}
 *{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
-header{position:sticky;top:0;z-index:10;background:rgba(16,42,67,.97);color:white;box-shadow:0 2px 12px #0002}
-.nav{max-width:1120px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
-.logo{font-weight:900;font-size:1.25rem;letter-spacing:1px}.logo span{color:var(--gold)}
-nav a{color:white;text-decoration:none;margin-left:20px;font-weight:700;font-size:.94rem}
-.menu{display:none;background:none;border:0;color:white;font-size:1.5rem}
-.hero{background:linear-gradient(135deg,#102a43 0%,#1769aa 100%);color:white;padding:100px 20px 90px}
-.hero-inner{max-width:1120px;margin:auto;display:grid;grid-template-columns:1.35fr .65fr;gap:40px;align-items:center}
-.badge{display:inline-block;background:#ffffff18;border:1px solid #ffffff44;padding:7px 13px;border-radius:30px;font-weight:700}
-h1{font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.05;margin:18px 0}.hero p{font-size:1.15rem;max-width:680px;color:#e6f0f8}
-.btn{display:inline-block;padding:13px 20px;border-radius:8px;text-decoration:none;font-weight:800;margin:8px 8px 0 0}
-.primary{background:var(--gold);color:#18212a}.outline{border:1px solid #ffffff77;color:white}
-.hero-card{background:#ffffff12;border:1px solid #ffffff25;padding:28px;border-radius:18px}.hero-card strong{font-size:2.2rem;display:block;color:var(--gold)}
-section{padding:75px 20px}.wrap{max-width:1120px;margin:auto}
-.section-head{text-align:center;max-width:760px;margin:0 auto 42px}.section-head h2{font-size:2.2rem;margin:0 0 10px;color:var(--navy)}.section-head p{color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{padding:28px;border:1px solid #e4ebf1;border-radius:16px;background:white;box-shadow:0 8px 24px #102a4310}.card h3{margin-top:0;color:var(--navy)}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.6;background:#fff}
+header{background:linear-gradient(135deg,var(--dark),var(--green));color:white;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px #0002}
+.nav{max-width:1150px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:800;font-size:20px;letter-spacing:.5px}
+.logo span{color:var(--gold)}
+nav{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+nav a{color:#fff;text-decoration:none;padding:8px 11px;border-radius:7px;font-weight:600;font-size:14px}
+nav a:hover{background:#ffffff22}
+.hero{background:linear-gradient(135deg,#eaf8ef,#fff9df);padding:85px 20px;text-align:center}
+.hero h1{font-size:clamp(32px,6vw,60px);margin:0 0 14px;color:var(--dark)}
+.hero h1 span{color:var(--green)}
+.hero p{max-width:760px;margin:0 auto 28px;font-size:19px}
+.btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;border:0;border-radius:8px;padding:12px 20px;font-weight:700;margin:5px;cursor:pointer}
+.btn.gold{background:var(--gold);color:#17220d}
+section{padding:65px 20px}
+.container{max-width:1100px;margin:auto}
+.section-title{text-align:center;color:var(--dark);font-size:34px;margin:0 0 12px}
+.section-sub{text-align:center;max-width:750px;margin:0 auto 35px;color:#52645b}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:white;border:1px solid #dcebe1;border-radius:14px;padding:25px;box-shadow:0 7px 20px #064a2810}
+.card h3{color:var(--green);margin-top:0}
+.icon{font-size:35px}
 .alt{background:var(--light)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.stat{background:white;border-radius:14px;padding:22px;text-align:center;border:1px solid #e5edf4}.stat b{font-size:1.7rem;color:var(--blue);display:block}
-.steps{counter-reset:step}.step{position:relative;padding-left:65px}.step:before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:42px;height:42px;border-radius:50%;background:var(--gold);display:grid;place-items:center;font-weight:900}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact-box{background:var(--navy);color:white;padding:32px;border-radius:18px}.contact-box a{color:var(--gold)}
-footer{background:#0b1e30;color:#d9e4ed;padding:30px 20px;text-align:center}.small{font-size:.9rem;color:#9eb0bf}
-@media(max-width:800px){nav{display:none}.menu{display:block}.hero-inner,.contact{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.hero{padding-top:70px}}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.step{background:#fff;border-radius:12px;padding:22px;border-left:5px solid var(--gold);box-shadow:0 4px 15px #0000000b}
+form{max-width:720px;margin:25px auto;background:#fff;padding:28px;border-radius:14px;box-shadow:0 8px 25px #0002}
+label{display:block;font-weight:700;margin:12px 0 6px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #cbd9d0;border-radius:7px;font:inherit}
+textarea{min-height:110px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.contact-box{background:var(--dark);color:#fff;border-radius:14px;padding:30px}
+.contact-box a{color:#fff}
+footer{background:#032619;color:#dcefe4;text-align:center;padding:30px 20px}
+.small{font-size:14px;color:#708078}
+@media(max-width:760px){.nav{align-items:flex-start;flex-direction:column}nav{justify-content:flex-start}.contact{grid-template-columns:1fr}.hero{padding:60px 18px}}
 </style>
 </head>
 <body>
+
 <header>
 <div class="nav">
-<div class="logo">HAIL <span>MASTECH</span></div>
-<button class="menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+<div class="logo">HAIL <span>MASTECH/GREENS</span></div>
 <nav>
-<a href="#home">Home</a><a href="#about">About</a><a href="#membership">Membership</a><a href="#welfare">Welfare</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+<a href="#home">Home</a>
+<a href="#about">About Us</a>
+<a href="#membership">Membership</a>
+<a href="#welfare">Welfare</a>
+<a href="#registration">Registration</a>
+<a href="#jobs">Jobs & Scholarships</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
 </nav>
 </div>
 </header>
 
 <main>
 <section class="hero" id="home">
-<div class="hero-inner">
-<div>
-<span class="badge">MASTECH ASSOCIATION</span>
-<h1>Together, we rise.</h1>
-<p>A community built to support one another, create opportunities and help every member move forward — in education, business, employment, travel and welfare.</p>
-<a class="btn primary" href="#membership">Join MASTECH</a>
-<a class="btn outline" href="#about">Learn More</a>
-</div>
-<div class="hero-card"><strong>One Community.</strong><span>One Support System. One Future.</span><p>We believe individual success becomes stronger when a community works together.</p></div>
+<div class="container">
+<h1>HAIL <span>MASTECH/GREENS</span> ASSOCIATION</h1>
+<p>Building a stronger community through welfare, education, opportunities, membership, scholarships, sponsorship jobs and mutual support.</p>
+<a class="btn" href="#membership">Become a Member</a>
+<a class="btn gold" href="https://www.jotform.com/262625281905055" target="_blank" rel="noopener">Candidate Registration</a>
 </div>
 </section>
 
 <section id="about">
-<div class="section-head"><h2>About MASTECH</h2><p>More than a welfare group — we are a community focused on practical support and long-term progress.</p></div>
-<div class="grid">
-<div class="card"><h3>Our Mission</h3><p>To create a dependable support network where members can contribute, access opportunities and receive help during difficult times.</p></div>
-<div class="card"><h3>Our Vision</h3><p>To build a united and accountable association where members support each other to achieve personal, educational and economic goals.</p></div>
-<div class="card"><h3>Our Values</h3><p>Unity, accountability, respect, transparency, responsibility and a genuine commitment to helping one another.</p></div>
-</div>
-</section>
-
-<section class="alt">
-<div class="wrap">
-<div class="section-head"><h2>What We Stand For</h2><p>Our support goes beyond funerals and naming ceremonies.</p></div>
-<div class="stats">
-<div class="stat"><b>🤝</b>Mutual Support</div><div class="stat"><b>🎓</b>Education</div><div class="stat"><b>💼</b>Opportunities</div><div class="stat"><b>🌍</b>Growth & Travel</div>
+<div class="container">
+<h2 class="section-title">About Us</h2>
+<p class="section-sub">HAIL MASTECH/GREENS ASSOCIATION is a community-focused platform created to connect members, promote welfare, share opportunities and support one another in education, work, business and personal development.</p>
+<div class="cards">
+<div class="card"><div class="icon">🤝</div><h3>Unity</h3><p>We encourage members to put aside ego and work together for the progress of everyone.</p></div>
+<div class="card"><div class="icon">🎓</div><h3>Education</h3><p>We share educational information, training opportunities and scholarship guidance.</p></div>
+<div class="card"><div class="icon">💼</div><h3>Opportunities</h3><p>We connect members with legitimate job, sponsorship and career-development opportunities.</p></div>
+<div class="card"><div class="icon">❤️</div><h3>Welfare</h3><p>We promote mutual assistance during difficult times and support community welfare initiatives.</p></div>
 </div>
 </div>
 </section>
 
-<section id="membership">
-<div class="section-head"><h2>Membership</h2><p>Membership is about belonging, contributing and helping build a stronger future for everyone.</p></div>
-<div class="grid">
-<div class="card step"><h3>Register</h3><p>Provide your basic membership information so the association can maintain an organized member record.</p></div>
-<div class="card step"><h3>Contribute</h3><p>Take part in agreed welfare contributions and support initiatives that benefit the wider membership.</p></div>
-<div class="card step"><h3>Participate</h3><p>Join discussions, educational activities, projects and opportunities that strengthen the association.</p></div>
+<section class="alt" id="membership">
+<div class="container">
+<h2 class="section-title">Membership</h2>
+<p class="section-sub">Join a community where members can connect, learn, share opportunities and support one another.</p>
+<div class="cards">
+<div class="card"><h3>Who Can Join?</h3><p>People interested in community welfare, education, career opportunities, entrepreneurship and mutual support.</p></div>
+<div class="card"><h3>Member Benefits</h3><p>Access community updates, educational discussions, opportunities, welfare initiatives and networking.</p></div>
+<div class="card"><h3>Member Responsibility</h3><p>Respect other members, contribute positively, provide accurate information and support the objectives of the association.</p></div>
+</div>
+<a class="btn" href="https://www.jotform.com/262625281905055" target="_blank" rel="noopener">Register Your Interest</a>
 </div>
 </section>
 
-<section id="welfare" class="alt">
-<div class="section-head"><h2>Welfare & Support</h2><p>A structured welfare system can help members face challenges while building opportunities together.</p></div>
-<div class="grid">
-<div class="card"><h3>Emergency Welfare</h3><p>Support for eligible members facing agreed welfare situations, subject to association rules and available funds.</p></div>
-<div class="card"><h3>Education & Scholarships</h3><p>Share scholarship information and explore ways to support members pursuing education and skills development.</p></div>
-<div class="card"><h3>Work & Business</h3><p>Connect members with legitimate employment, business and skills opportunities in Ghana and abroad.</p></div>
+<section id="welfare">
+<div class="container">
+<h2 class="section-title">Welfare Contribution Program</h2>
+<p class="section-sub">Our welfare program is designed to encourage members to support one another when genuine needs arise.</p>
+<div class="steps">
+<div class="step"><h3>1. Member Contribution</h3><p>Members participate according to the association's approved welfare contribution arrangements.</p></div>
+<div class="step"><h3>2. Welfare Request</h3><p>A member can submit a welfare request when support is needed.</p></div>
+<div class="step"><h3>3. Review</h3><p>Authorized association representatives review requests and available welfare resources.</p></div>
+<div class="step"><h3>4. Support</h3><p>Approved support is provided according to the association's rules and available funds.</p></div>
+</div>
+<p class="small" style="text-align:center;margin-top:25px">All welfare contributions and distributions should follow the association's approved rules and accountability procedures.</p>
 </div>
 </section>
 
-<section id="projects">
-<div class="section-head"><h2>Projects & Opportunities</h2><p>We aim to turn collective support into practical opportunities.</p></div>
-<div class="grid">
-<div class="card"><h3>Member Opportunity Hub</h3><p>A place to share verified jobs, scholarships, training, travel and business opportunities.</p></div>
-<div class="card"><h3>Community Development</h3><p>Collective initiatives designed to create lasting value for members and the wider community.</p></div>
-<div class="card"><h3>Skills & Knowledge</h3><p>Educational sessions and discussions covering useful areas such as law, health, travel, relationships and careers.</p></div>
+<section class="alt" id="registration">
+<div class="container">
+<h2 class="section-title">Candidates Registration Portal</h2>
+<p class="section-sub">Register your interest for membership, jobs, sponsorship opportunities, scholarships or training programs.</p>
+<div style="text-align:center;background:#fff;padding:35px;border-radius:14px;box-shadow:0 8px 25px #0002;max-width:720px;margin:25px auto">
+<h3 style="color:var(--green);font-size:25px">Register as a Candidate</h3>
+<p>Complete the official HAIL MASTECH/GREENS ASSOCIATION registration form. Your submission will be securely received and managed through Jotform.</p>
+<a class="btn" href="https://www.jotform.com/262625281905055" target="_blank" rel="noopener">Open Registration Form</a>
+</div>
 </div>
 </section>
 
-<section id="contact" class="alt">
-<div class="wrap contact">
-<div><h2>Get Involved</h2><p>Have an idea, opportunity or question? Reach out to the MASTECH team.</p><p><b>Email:</b> <a href="mailto:info@mastechassociation.org">info@mastechassociation.org</a></p><p class="small">Replace this email with your official association contact before publishing.</p></div>
-<div class="contact-box"><h3>HAIL MASTECH</h3><p>Unity creates strength. Accountability creates trust. Together we create opportunities.</p><a class="btn primary" href="#membership">Become a Member</a></div>
+<section id="jobs">
+<div class="container">
+<h2 class="section-title">Sponsorship Jobs & Scholarship Training</h2>
+<p class="section-sub">We aim to share information about employment, sponsorship, scholarships and skills-training opportunities with members.</p>
+<div class="cards">
+<div class="card"><div class="icon">💼</div><h3>Sponsorship Jobs</h3><p>Information about employment opportunities that may include employer sponsorship, subject to the employer and immigration requirements.</p></div>
+<div class="card"><div class="icon">🎓</div><h3>Scholarships</h3><p>Scholarship and study opportunities can be shared to help members pursue further education.</p></div>
+<div class="card"><div class="icon">🛠️</div><h3>Skills Training</h3><p>Training opportunities can help members develop practical and professional skills for employment and business.</p></div>
+</div>
+<a class="btn" href="https://www.jotform.com/262625281905055" target="_blank" rel="noopener">Apply / Register Interest</a>
+</div>
+</section>
+
+<section class="alt" id="education">
+<div class="container">
+<h2 class="section-title">Education</h2>
+<p class="section-sub">Educational discussions and resources are part of our weekly community activities.</p>
+<div class="cards">
+<div class="card"><h3>Law Education</h3><p>General educational discussions about laws, rights and responsibilities.</p></div>
+<div class="card"><h3>Health Education</h3><p>General health-awareness information and educational discussions.</p></div>
+<div class="card"><h3>Travel Education</h3><p>Travel, study-abroad and relocation information for members.</p></div>
+<div class="card"><h3>Relationship Education</h3><p>Healthy communication, relationships and personal development discussions.</p></div>
+<div class="card"><h3>Career Education</h3><p>Job-search guidance, skills development and professional growth.</p></div>
+<div class="card"><h3>Community Learning</h3><p>Members can share knowledge, experiences and useful resources with one another.</p></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<h2 class="section-title">Contact Us</h2>
+<div class="contact">
+<div class="contact-box">
+<h3>HAIL MASTECH/GREENS ASSOCIATION</h3>
+<p>For membership, welfare, registration, jobs, scholarships and training enquiries:</p>
+<p>📧 <a href="mailto:mastechgreentrack@gmail.com">mastechgreentrack@gmail.com</a></p>
+<p>📞 <a href="tel:+971557256457">+971 55 725 6457</a></p>
+<p>WhatsApp: <a href="https://wa.me/971557256457" target="_blank">Chat with us</a></p>
+</div>
+<div class="card">
+<h3>Send an Enquiry</h3>
+<form onsubmit="sendEmail(event)">
+<label>Your Name</label><input id="contactName" required>
+<label>Your Email</label><input id="contactEmail" type="email" required>
+<label>Message</label><textarea id="contactMessage" required></textarea>
+<button class="btn" type="submit">Send Email</button>
+</form>
+</div>
+</div>
 </div>
 </section>
 </main>
 
-<footer><div>© 2026 MASTECH Association. All rights reserved.</div><div class="small">Built around unity, welfare and opportunity.</div></footer>
+<footer>
+<p><strong>HAIL MASTECH/GREENS ASSOCIATION</strong></p>
+<p>Unity • Welfare • Education • Opportunities</p>
+<p>© <span id="year"></span> HAIL MASTECH/GREENS ASSOCIATION. All rights reserved.</p>
+</footer>
+
 <script>
-document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav').classList.remove('open')));
+document.getElementById("year").textContent=new Date().getFullYear();
+
+function sendEmail(e){
+ e.preventDefault();
+ const name=document.getElementById("contactName").value;
+ const email=document.getElementById("contactEmail").value;
+ const msg=document.getElementById("contactMessage").value;
+ const subject=encodeURIComponent("Website Enquiry - HAIL MASTECH/GREENS");
+ const body=encodeURIComponent("Name: "+name+"\nEmail: "+email+"\n\nMessage:\n"+msg);
+ window.location.href="mailto:mastechgreentrack@gmail.com?subject="+subject+"&body="+body;
+}
 </script>
-<style>@media(max-width:800px){nav.open{display:flex;position:absolute;top:60px;left:0;right:0;background:#102a43;flex-direction:column;padding:15px 20px}nav.open a{margin:10px 0}}</style>
 </body>
 </html>
